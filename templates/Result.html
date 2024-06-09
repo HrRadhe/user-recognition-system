@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+    <title>Result...</title>
+</head>
+    <div class="container">
+        <div class="display_details">
+            <div class="heading">
+            <h1>PERSON INFORMATION</h1>
+        </div>
+        <div class="content">
+            <div class="infogrp">
+                <p class="id">First Name :</p>
+                <p class="value">{{ data.1 }}</p>
+            </div>
+            <div class="infogrp">
+                <p class="id">Last Name :</p>
+                <p class="value">{{data.2}}</p>
+            </div>
+            <div class="infogrp">
+                <p class="id">Contact :</p>
+                <p class="value">{{data.3}}</p>
+            </div>
+            <div class="infogrp">
+                <p class="id">State :</p>
+                <p class="value">{{data.4}}</p>
+            </div>
+            <div class="infogrp">
+                <p class="id">City :</p>
+                <p class="value">{{data.5}}</p>
+            </div>
+            <div class="infogrp">
+                <p class="id">Native :</p>
+                <p class="value">{{data.6}}</p>
+            </div>
+            <div class="infogrp">
+                <p class="id">Gender :</p>
+                <p class="value">{{data.7}}</p>
+            </div>
+                        
+        </div>
+        </div>
+
+        <div class="gallery">
+          {% for image in images %}
+          <div class="gallery__item gallery__item--hor">
+            <img src="{{image}}"" alt="">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+</html>
